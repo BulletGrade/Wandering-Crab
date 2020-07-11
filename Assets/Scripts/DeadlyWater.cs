@@ -11,6 +11,8 @@ public class DeadlyWater : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            other.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+            other.gameObject.GetComponent<PlayerController>().enabled = false;
             StartCoroutine("Restart");
         }
     }
