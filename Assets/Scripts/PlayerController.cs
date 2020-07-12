@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.W) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundedFor))
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundedFor))
         {
             controller.velocity = new Vector2(controller.velocity.x, jumpForce);
         }

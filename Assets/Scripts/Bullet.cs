@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         if (gameObject != null)
         {
-            Destroy(gameObject, 3f);
+            Destroy(gameObject, 2f);
         }
     }
 
@@ -28,6 +28,12 @@ public class Bullet : MonoBehaviour
         if (other.tag == "Enemy" && gameObject != null)
         {
             Destroy(other.gameObject);
+            GetComponent<Renderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
+        }
+
+        if (other.gameObject.layer == 8)
+        {
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
         }

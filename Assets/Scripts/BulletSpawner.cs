@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject spawningBullet;
     public float shootingCooldown = 10f;
     public float bulletSpeed = 5f;
     float lastShot;
@@ -27,13 +28,14 @@ public class BulletSpawner : MonoBehaviour
     {
         Vector2 positionToShoot = new Vector2(transform.position.x, transform.position.y);
 
-        bullet = Instantiate(bullet, positionToShoot + new Vector2(1, 0), Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0);
+        spawningBullet = bullet;
+        spawningBullet = Instantiate(bullet, positionToShoot + new Vector2(1, 0), Quaternion.identity);
+        spawningBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, 0);
         
         bullet.name = "Bullet"; // To avoid clones.
 
-        bullet = Instantiate(bullet, positionToShoot + new Vector2(-1, 0), Quaternion.identity);
-        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0);
+        spawningBullet = Instantiate(bullet, positionToShoot + new Vector2(-1, 0), Quaternion.identity);
+        spawningBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-bulletSpeed, 0);
 
         bullet.name = "Bullet"; // To avoid clones.
     }

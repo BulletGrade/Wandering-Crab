@@ -16,6 +16,9 @@ public class WinFlag : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            other.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+            other.gameObject.GetComponent<PlayerController>().enabled = false;
+            FindObjectOfType<BulletSpawner>().enabled = false;
             gameManager.StartCoroutine("Win");
         }
     }

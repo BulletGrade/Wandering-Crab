@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public bool isRunner;
+    [SerializeField]
+    bool movingRight = true;
     Animator enemyAnimation;
     public float speed;
     public float distance;
     GameManager gameManager;
 
-    bool movingRight = true;
 
     public Transform groundCheck;
 
@@ -35,7 +36,10 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        if (isRunner)
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
 
         RaycastHit2D groundInfo = Physics2D.Raycast(groundCheck.position, Vector2.down, distance);
 
