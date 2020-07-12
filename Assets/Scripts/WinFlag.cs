@@ -5,17 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class WinFlag : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            StartCoroutine("Win");
+            gameManager.StartCoroutine("Win");
         }
-    }
-
-    IEnumerator Win()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

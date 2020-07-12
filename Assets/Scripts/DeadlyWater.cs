@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DeadlyWater : MonoBehaviour
 {
-    public Camera gameCamera;
+    GameManager gameManager;
+
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
@@ -13,14 +17,7 @@ public class DeadlyWater : MonoBehaviour
         {
             other.gameObject.GetComponent<Rigidbody2D>().simulated = false;
             other.gameObject.GetComponent<PlayerController>().enabled = false;
-            StartCoroutine("Restart");
+            gameManager.StartCoroutine("Restart");
         }
-    }
-
-    IEnumerator Restart()
-    {
-        gameCamera.backgroundColor = Color.red;
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
