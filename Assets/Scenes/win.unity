@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -353}
-  m_SizeDelta: {x: 900, y: 900}
+  m_AnchoredPosition: {x: -0.000011444092, y: 20.083}
+  m_SizeDelta: {x: 570.6465, y: 102.04019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000024521
 MonoBehaviour:
@@ -183,7 +183,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 90
+    m_MaxSize: 212
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -210,6 +210,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5664382011428301737, guid: 947c678857d6288468591961faf7e2f0,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5048dfdb61db8da4fa9bd1e625f3b3f3, type: 3}
+    - target: {fileID: -5664382011428301737, guid: 947c678857d6288468591961faf7e2f0,
+        type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4432638845517538915, guid: 947c678857d6288468591961faf7e2f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,8 +321,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -134.3}
-  m_SizeDelta: {x: 900, y: 900}
+  m_AnchoredPosition: {x: -0.0000076294, y: 5.9593964}
+  m_SizeDelta: {x: 444.89044, y: 73.79297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1711966337
 MonoBehaviour:
@@ -335,7 +345,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 27399917f3bc6234cb8e971257a2cfd8, type: 3}
-    m_FontSize: 20
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
@@ -403,10 +413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1336, y: 768}
+  m_ReferenceResolution: {x: 640, y: 360}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
